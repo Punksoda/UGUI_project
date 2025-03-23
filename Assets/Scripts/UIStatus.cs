@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIStatus : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Button backBtn;
     void Start()
     {
-        
+        backBtn.onClick.AddListener(Back);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Back()
     {
-        
+        UIManager.Instance.Back();
     }
+
+   
 }
