@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     }
 
     public static UIManager Instance { get; private set; }
-    private GameObject previousUI; // 이전 UI 저장
+
 
     private void Awake()
     {
@@ -44,23 +44,15 @@ public class UIManager : MonoBehaviour
 
     public void ShowUI(GameObject uiObject)
     {
-        if (uiObject== null) return;
-
-        if (previousUI != null)
-            previousUI.SetActive(false); // 기존 UI 닫기
-
+        if (uiObject == null) return;
         uiObject.SetActive(true);
-        previousUI = uiObject; // 현재 UI를 저장
+       
     }
 
     public void Back()
     {
-        if (previousUI != null)
-        {
-            previousUI.SetActive(false);
-            previousUI = null;
-        }
-
+        status.gameObject.SetActive(false);
+        inventory.gameObject.SetActive(false);
         mainMenu.gameObject.SetActive(true); // 메인 메뉴로 돌아감
     }
 }

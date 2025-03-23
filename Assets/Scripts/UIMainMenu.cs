@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
 {
-   
     public Button btnStatus;
     public Button btnInven;
 
@@ -11,7 +10,6 @@ public class UIMainMenu : MonoBehaviour
     {
         btnStatus.onClick.AddListener(OpenStatus);
         btnStatus.onClick.AddListener(OpenInventory);
-       
     }
 
     public void OpenMainMenu()
