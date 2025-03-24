@@ -16,7 +16,7 @@ public class UIMainMenu : MonoBehaviour
     {
         btnStatus.onClick.AddListener(OpenStatus);
         btnInven.onClick.AddListener(OpenInventory);
-        UpdateCharacterInfo();
+        SetData();
     }
 
     public void OpenMainMenu()
@@ -34,7 +34,7 @@ public class UIMainMenu : MonoBehaviour
         UIManager.Instance.ShowUI(UIManager.Instance.inventory.gameObject);
     }
 
-    public void UpdateCharacterInfo()
+    public void SetData()
     {
         Character player = GameManager.Instance.PlayerCharacter;
         playerNameText.text = $"{player.Name}";
