@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
-            PlayerCharacter = new Character("Groove", "Demolish enemy with Great Fire Sworld", 12, 50, 30, 150, 999999);
+            PlayerCharacter = new Character("Groove", "Demolish enemy with Great Fire Sworld", 12, 50, 30, 150, 999999, 100, 45);
         }
 
         else

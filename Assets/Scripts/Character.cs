@@ -6,16 +6,15 @@ public class Character : MonoBehaviour
     public string Description { get; private set; }
     public int Level {  get; private set; }
     public int Exp { get; private set; }
-
+    public int Atk { get; private set; }
     public int Def { get; private set; }
-
     public int Hp {  get; private set; }
-
+    public int Crit { get; private set; }
     public int Gold {  get; private set; }
 
-    //생성자 만들기, 생성자를 만들어줄 필요는 없다 왜냐하면, Monobehaviour를 상속받는 이상, 생성자를 만들 수 없다구리
+    // 생성자 만들기, 생성자를 만들어줄 필요는 없다 왜냐하면, Monobehaviour를 상속받는 이상, 생성자를 만들 수 없다구리
     // 정확하게는 데이터를 생성해주고, 값을 할당해주는 것은 가능하지만 컴포넌트의 기능을 사용할 수 없다
-    public Character (string name, string description, int level, int exp, int def, int hp, int gold)
+    public Character (string name, string description, int level, int exp, int def, int hp, int gold, int crit, int atk)
     {
         Name = name;
         Description = description;
@@ -24,5 +23,7 @@ public class Character : MonoBehaviour
         Def = def;
         Hp = hp;
         Gold = gold;
+        Crit = crit;
+        Atk = atk;
     }
 }

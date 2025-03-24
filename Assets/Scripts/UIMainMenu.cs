@@ -11,6 +11,10 @@ public class UIMainMenu : MonoBehaviour
     public TMP_Text playerGoldText;
     public TMP_Text playerLevelText;
     public TMP_Text playerExpText;
+    public TMP_Text playerCritText;
+    public TMP_Text playerHealthText;
+    public TMP_Text playerAttackText;
+    public TMP_Text playerDefenseText; 
 
     public void Start()
     {
@@ -42,5 +46,11 @@ public class UIMainMenu : MonoBehaviour
         playerLevelText.text = $"{player.Level}";
         playerGoldText.text = $"{player.Gold}G";
         playerExpText.text = $"{player.Exp} / 150 ";
+        playerCritText.text = $"{player.Crit}";
+        playerDefenseText.text = $"{player.Def}";
+        playerCritText.text = $"{player.Crit}";
+        playerHealthText.text = $"{player.Hp}";
+        playerAttackText.text = $"{player.Atk}";
+
     }
 }
