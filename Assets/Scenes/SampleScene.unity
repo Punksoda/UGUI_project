@@ -2790,8 +2790,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3663,6 +3663,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnStatus: {fileID: 320791681}
   btnInven: {fileID: 1877959308}
+  playerNameText: {fileID: 1029995898}
+  playerDescriptionText: {fileID: 1901519438}
+  playerGoldText: {fileID: 1630105039}
+  playerLevelText: {fileID: 1740639728}
+  playerExpText: {fileID: 1170049525}
 --- !u!1 &1445047300
 GameObject:
   m_ObjectHideFlags: 0
