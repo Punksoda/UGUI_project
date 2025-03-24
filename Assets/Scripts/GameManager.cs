@@ -3,6 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
+    public Character PlayerCharacter {  get; private set; }
 
     public static GameManager Instance
     {
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
+            PlayerCharacter = new Character("Groove", "Demolish enemy with Great Fire Sworld", 12, 50, 30, 150, 999999);
         }
 
         else

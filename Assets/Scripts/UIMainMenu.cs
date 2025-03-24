@@ -1,15 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIMainMenu : MonoBehaviour
 {
     public Button btnStatus;
     public Button btnInven;
+    public TMP_Text playerNameText;
+    public TMP_Text playerDescriptionText;
+    public TMP_Text playerGoldText;
+    public TMP_Text playerLevelText;
+    public TMP_Text playerExpText;
 
     public void Start()
     {
         btnStatus.onClick.AddListener(OpenStatus);
-        btnStatus.onClick.AddListener(OpenInventory);
+        btnInven.onClick.AddListener(OpenInventory);
+        UpdateCharacterInfo();
     }
 
     public void OpenMainMenu()
@@ -25,5 +32,15 @@ public class UIMainMenu : MonoBehaviour
     public void OpenInventory()
     {
         UIManager.Instance.ShowUI(UIManager.Instance.inventory.gameObject);
+    }
+
+    public void UpdateCharacterInfo()
+    {
+        Character player = GameManager.Instance.PlayerCharacter;
+        playerNameText.text = $"{player.Name}";
+        playerDescriptionText.text = $"{player.Description}";
+        playerLevelText.text = $"{player.Level}";
+        playerGoldText.text = $"{player.Gold}G";
+        playerExpText.text = $"{player.Exp} / 150 ";
     }
 }
