@@ -9,11 +9,12 @@ public class UIInventory : MonoBehaviour
     public GameObject slot;
     public Transform slotTransform;
 
-
-    List<GameObject> inventoryslots = new List<GameObject>();
+    private Character player;
+    private List<GameObject> inventoryslots = new List<GameObject>();
  
     private void Start()
     {
+        player = GameManager.Instance.PlayerCharacter;
         backBtn.onClick.AddListener(Back);
         checkBtn.onClick.AddListener(InventoryUI);
     }
@@ -28,5 +29,19 @@ public class UIInventory : MonoBehaviour
     {
         GameObject newSlot = Instantiate(slot, slotTransform);
         inventoryslots.Add(newSlot);
+    }
+
+    private void ToggleEquip(GameObject item)
+    {
+        if(player.E_Item == item)
+        {
+            player.UnequipItem();
+            Debug.Log($"{item.name} «ÿ¡¶µ ");
+        }
+        else
+        {
+            player.Equipitem(item);
+            Debug.Log($"{item.name} ¿Â¬¯µ ");
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -11,6 +12,8 @@ public class Character : MonoBehaviour
     public int Hp {  get; private set; }
     public int Crit { get; private set; }
     public int Gold {  get; private set; }
+    public GameObject E_Item { get; private set; }
+    public List<GameObject>Inventory = new List<GameObject>();
 
     // 생성자 만들기, 생성자를 만들어줄 필요는 없다 왜냐하면, Monobehaviour를 상속받는 이상, 생성자를 만들 수 없다구리
     // 정확하게는 데이터를 생성해주고, 값을 할당해주는 것은 가능하지만 컴포넌트의 기능을 사용할 수 없다
@@ -25,5 +28,32 @@ public class Character : MonoBehaviour
         Gold = gold;
         Crit = crit;
         Atk = atk;
+    }
+
+    public void Additem(GameObject item)
+    {
+        if(item != null)
+        {
+            Inventory.Add(item);
+            Debug.Log($"{item.name}을 인벤토리에 추가했습니다!");
+        }
+    }
+
+    public void Equipitem(GameObject item)
+    {
+        if(Inventory.Contains(item))
+        {
+           E_Item = item;
+           Debug.Log($"{item.name}을 장착했습니다!");
+        }
+    }
+
+    public void UnequipItem()
+    {
+        if(E_Item != null)
+        {
+            Debug.Log($"{E_Item.name}을 해제했습니다!");
+            E_Item = null;
+        }
     }
 }
