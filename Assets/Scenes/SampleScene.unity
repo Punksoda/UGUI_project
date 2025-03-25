@@ -2794,6 +2794,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02238a6a74f6c6040b34bfc257267f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordIcon: {fileID: 21300000, guid: e6e7615c68af0da4db5e31df1ee8e65f, type: 3}
+  playerNameText: {fileID: 1029995898}
+  playerDescriptionText: {fileID: 1901519438}
+  playerGoldText: {fileID: 1630105039}
+  playerLevelText: {fileID: 1740639728}
+  playerExpText: {fileID: 1170049525}
+  playerCritText: {fileID: 1587826900}
+  playerHealthText: {fileID: 1949784562}
+  playerAttackText: {fileID: 515391892}
+  playerDefenseText: {fileID: 660327679}
 --- !u!4 &1165820875
 Transform:
   m_ObjectHideFlags: 0
@@ -2972,7 +2982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c5026bbbdecab449c1fe729530a295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Menu: {fileID: 0}
+  m_Menu: {fileID: 1363818464}
   m_Status: {fileID: 416275027}
   m_Inventory: {fileID: 2118672978}
 --- !u!4 &1217259281
@@ -3387,15 +3397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnStatus: {fileID: 320791681}
   btnInven: {fileID: 1877959308}
-  playerNameText: {fileID: 1029995898}
-  playerDescriptionText: {fileID: 1901519438}
-  playerGoldText: {fileID: 1630105039}
-  playerLevelText: {fileID: 1740639728}
-  playerExpText: {fileID: 1170049525}
-  playerCritText: {fileID: 1587826900}
-  playerHealthText: {fileID: 1949784562}
-  playerAttackText: {fileID: 515391892}
-  playerDefenseText: {fileID: 660327679}
 --- !u!1 &1445047300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,10 +5522,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a9fbaa24b94884a8d29ad8a7b3dca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotPrefab: {fileID: 2756836919709913536, guid: 48358e41e7138654f91e0d062d9eb228, type: 3}
+  slotParent: {fileID: 1792667639}
   backBtn: {fileID: 1445047302}
-  checkBtn: {fileID: 1283032501}
-  slot: {fileID: 2756836919709913536, guid: 48358e41e7138654f91e0d062d9eb228, type: 3}
-  slotTransform: {fileID: 1792667639}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

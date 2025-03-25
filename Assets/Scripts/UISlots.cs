@@ -19,7 +19,7 @@ public class UISlot : MonoBehaviour
             itemIcon.sprite = currentItem.itemIcon;  // 아이콘 설정
             itemNameText.text = currentItem.itemName;  // 이름 설정
             slotButton.onClick.RemoveAllListeners();
-            slotButton.onClick.AddListener(() => ToggleEquip());  // 슬롯 클릭 시 장착/해제
+            slotButton.onClick.AddListener(() => UEquip());  // 슬롯 클릭 시 장착/해제
         }
         else
         {
@@ -38,7 +38,7 @@ public class UISlot : MonoBehaviour
     }
 
     // 아이템 장착/해제
-    private void ToggleEquip()
+    private void UEquip()
     {
         if (currentItem != null)
         {
