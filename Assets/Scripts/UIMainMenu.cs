@@ -51,6 +51,6 @@ public class UIMainMenu : MonoBehaviour
         playerCritText.text = $"{player.Crit}";
         playerHealthText.text = $"{player.Hp}";
         playerAttackText.text = $"{player.Atk}";
-
     }
+
 }

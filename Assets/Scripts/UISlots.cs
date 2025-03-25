@@ -1,18 +1,49 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UISlots : MonoBehaviour
+public class UISlot : MonoBehaviour
 {
-    [SerializeField] //어떤 필드값을 할당 해줘야할까???
+    [SerializeField] private Image itemIcon;  // 아이템 아이콘 이미지
+    [SerializeField] private Text itemNameText;  // 아이템 이름 텍스트
+    [SerializeField] private Button slotButton;  // 슬롯 버튼
 
-    private void SetItem()
+    private Item currentItem;  // 현재 슬롯에 저장된 아이템
+
+    // 아이템 설정
+    public void SetItem(Item item)
     {
-        // 아이템을 슬롯에 저장하기!
-        // UIInventory에서 슬롯리스트를 만든다, 그 후 그 리스트에서 UIslot이 추가되면 SetItem 함수가 작동하기
+        currentItem = item;
+
+        if (currentItem != null)
+        {
+            itemIcon.sprite = currentItem.itemIcon;  // 아이콘 설정
+            itemNameText.text = currentItem.itemName;  // 이름 설정
+            slotButton.onClick.RemoveAllListeners();
+            slotButton.onClick.AddListener(() => ToggleEquip());  // 슬롯 클릭 시 장착/해제
+        }
+        else
+        {
+            itemIcon.sprite = null;  // 아이템이 없으면 아이콘 제거
+            itemNameText.text = "Empty";  // 빈 슬롯 표시
+        }
     }
 
-    private void RefreshUI()
+    // UI 갱신
+    public void RefreshUI()
     {
-        // 해당 함수가 어떤 작동을 요구하는지 정확하게 모르겠음;;
+        if (currentItem != null)
+        {
+            itemIcon.color = currentItem.isEquipped ? Color.green : Color.white;  // 장착된 아이템은 색상 변경
+        }
     }
 
+    // 아이템 장착/해제
+    private void ToggleEquip()
+    {
+        if (currentItem != null)
+        {
+            GameManager.Instance.PlayerCharacter.ToggleEquip(currentItem);
+            RefreshUI();  // UI 갱신
+        }
+    }
 }
