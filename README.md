@@ -3,6 +3,25 @@
 
 ![First Title](https://github.com/user-attachments/assets/cff1d720-1572-4424-bd5d-402cf327b298)
 
+<details>
+<div markdown="1">
+
+![Second Title](https://github.com/user-attachments/assets/68c024f0-78fe-432a-98ea-596dbe5e5967)
+
+</div>
+</details>
+
+<details>
+<div markdown="1">
+
+![Thrid title](https://github.com/user-attachments/assets/6559c33f-2436-4e4a-80a3-8ef4e5041b7d)
+
+</div>
+</details>
+
+
+
+
 - UI 구성하기
   
   (UGUI를 활용해 UIMainMenu, UIStatus, UIInventory 구성을 완료, FilledAmount등 기존에 있는 유니티의 기본 모양으로만 구현함)
