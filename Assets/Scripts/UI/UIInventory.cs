@@ -10,7 +10,6 @@ public class UIInventory : MonoBehaviour
 
     public Button backBtn;
     public Button itemBtn;
-    public Sprite shieldIcon;
 
     private List<UISlot> slotList = new List<UISlot>();
     private Character player;
@@ -40,13 +39,20 @@ public class UIInventory : MonoBehaviour
     public void FarmItem()
     {
         // 가상의 아이템 생성
-        Item newItem = new Item("Stout Shield", "Strong shield can prevent fire", 0, 100, 0, shieldIcon); 
-        player.Inventory.Add(newItem);  
-        AddItemToUI(newItem);  
-        GameManager.Instance.SetData();
+        string[] itemPool = { "Fire Sword", "Stout Shield" };
+        string randomItemName = itemPool[Random.Range(0, itemPool.Length)]; // 랜덤으로 아이템 값 선택
+
+        Item newItem = ItemManager.Instance.CreateItem(randomItemName); // 랜덤 아이템 값 생성
+        if (newItem != null)
+        {
+            player.Inventory.Add(newItem);
+            AddItemToUI(newItem);
+            GameManager.Instance.SetData();
+        }
+     
     }
 
-    private void AddItemToUI(Item item)
+    private void AddItemToUI(Item item) // 슬롯에서 보여줄 아이템 프리팹 선택
     {
         GameObject selectedPrefab = Random.value < 0.5f ? slotPrefab : slotPrefab_2;
         GameObject newSlotObj = Instantiate(selectedPrefab, slotParent);

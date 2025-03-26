@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
-    public Sprite swordIcon;
     public TMP_Text playerNameText;
     public TMP_Text playerDescriptionText;
     public TMP_Text playerGoldText;
@@ -34,9 +33,11 @@ public class GameManager : MonoBehaviour
             // 플레이어 캐릭터 생성
             PlayerCharacter = new Character("Groove", "Basic adventurer", 5, 10, 10, 100, 150, 0, 5, new List<Item>());
 
-            // 아이템 생성 및 인벤토리에 추가, 예시 아이템 임시로 미리 추가
-            Item fireSword = new Item("Fire Sword", "A sword imbued with fire", 100, 50, 10, swordIcon);
-            PlayerCharacter.AddItem(fireSword);
+            Item fireSword = ItemManager.Instance.CreateItem("Fire Sword"); // 매니저를 참조해서 생성
+            if (fireSword != null)
+            {
+                PlayerCharacter.AddItem(fireSword);
+            }
         }
         else
         {

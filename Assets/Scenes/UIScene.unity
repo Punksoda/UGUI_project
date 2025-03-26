@@ -2765,6 +2765,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124302822}
   m_CullTransparentMesh: 1
+--- !u!1 &1141508879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1141508881}
+  - component: {fileID: 1141508880}
+  m_Layer: 0
+  m_Name: Item_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1141508880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141508879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb21d6042a441dc4e91bb8eb794a98b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordIcon: {fileID: 21300000, guid: e6e7615c68af0da4db5e31df1ee8e65f, type: 3}
+  shieldIcon: {fileID: 21300000, guid: 6334dece174440d43982cdb5dcb0a49f, type: 3}
+--- !u!4 &1141508881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141508879}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165820873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,7 +2840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02238a6a74f6c6040b34bfc257267f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordIcon: {fileID: 0}
   playerNameText: {fileID: 1029995898}
   playerDescriptionText: {fileID: 1901519438}
   playerGoldText: {fileID: 1630105039}
@@ -5527,7 +5572,6 @@ MonoBehaviour:
   slotParent: {fileID: 1792667639}
   backBtn: {fileID: 1445047302}
   itemBtn: {fileID: 1283032501}
-  shieldIcon: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5535,6 +5579,7 @@ SceneRoots:
   - {fileID: 1165820875}
   - {fileID: 963194228}
   - {fileID: 705507995}
+  - {fileID: 1141508881}
   - {fileID: 1217259281}
   - {fileID: 1363818463}
   - {fileID: 416275026}

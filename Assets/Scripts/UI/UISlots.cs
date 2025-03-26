@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class UISlot : MonoBehaviour
 {
-    [SerializeField] private Image itemIcon;  // 아이템 아이콘 이미지
-    [SerializeField] private Text itemNameText;  // 아이템 이름 텍스트
-    [SerializeField] private Button slotButton;  // 슬롯 버튼
+    [SerializeField] private Image itemIcon;  
+    [SerializeField] private Text itemNameText;  
+    [SerializeField] private Button slotButton; 
 
     private Item currentItem;  // 현재 슬롯에 저장된 아이템
 
