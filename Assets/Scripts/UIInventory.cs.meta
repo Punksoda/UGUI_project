@@ -6,6 +6,9 @@ MonoImporter:
   defaultReferences:
   - slotPrefab: {instanceID: 0}
   - slotParent: {instanceID: 0}
+  - backBtn: {instanceID: 0}
+  - itemBtn: {instanceID: 0}
+  - shieldIcon: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
