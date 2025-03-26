@@ -3,13 +3,13 @@ using UnityEngine;
 [System.Serializable]
 public class Item
 {
-    public string itemName;  // 아이템 이름
-    public string itemDescription;  // 아이템 설명
-    public int itemAttack; // 아이템 공격력
-    public int itemDeffense; // 아이템 방어력
-    public int itemCritical; // 아이템 치명타율
-    public Sprite itemIcon;  // 아이템 아이콘
-    public bool isEquipped;  // 아이템 장착 여부
+    public string itemName;  
+    public string itemDescription;  
+    public int itemAttack; 
+    public int itemDeffense; 
+    public int itemCritical; 
+    public Sprite itemIcon;  
+    public bool isEquipped;  
 
     // 생성자
     public Item(string name, string description, int i_Atk, int i_Def, int i_Crit, Sprite icon)

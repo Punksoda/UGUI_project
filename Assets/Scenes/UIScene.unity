@@ -2794,7 +2794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02238a6a74f6c6040b34bfc257267f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordIcon: {fileID: 21300000, guid: e6e7615c68af0da4db5e31df1ee8e65f, type: 3}
+  swordIcon: {fileID: 0}
   playerNameText: {fileID: 1029995898}
   playerDescriptionText: {fileID: 1901519438}
   playerGoldText: {fileID: 1630105039}

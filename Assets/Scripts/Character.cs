@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class Character 
 {
-    public string Name { get; private set; } // 캐릭터 이름
-    public string Description { get; private set; } // 캐릭터 설명
-    public int Level { get; private set; } // 레벨
-    public int Exp { get; private set; } // 경험치
-    public int Atk { get; private set; } // 공격력
-    public int Def { get; private set; } // 방어력
-    public int Hp { get; private set; } // 체력
-    public int Crit { get; private set; } // 치명타 확률
-    public int Gold { get; private set; } // 보유 금액
+    public string Name { get; private set; } 
+    public string Description { get; private set; } 
+    public int Level { get; private set; } 
+    public int Exp { get; private set; } 
+    public int Atk { get; private set; } 
+    public int Def { get; private set; } 
+    public int Hp { get; private set; } 
+    public int Crit { get; private set; } 
+    public int Gold { get; private set; } 
     public List<Item> E_Item { get; private set; } // 장착된 아이템
     public List<Item> Inventory { get; private set; } // 인벤토리
 
@@ -27,7 +27,7 @@ public class Character
         Gold = gold;
         Crit = crit;
         Atk = atk;
-        Inventory = inventory ?? new List<Item>();  // 기본값으로 빈 리스트 할당
+        Inventory = inventory ?? new List<Item>();
         E_Item = new List<Item>();
     }
 

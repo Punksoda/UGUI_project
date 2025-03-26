@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
             PlayerCharacter = new Character("Groove", "Basic adventurer", 5, 10, 10, 100, 150, 0, 5, new List<Item>());
 
             // 아이템 생성 및 인벤토리에 추가, 예시 아이템 임시로 미리 추가
-            Item fireSword = new Item("Fire Sword", "A sword imbued with fire", 100, 50, 10,swordIcon);
+            Item fireSword = new Item("Fire Sword", "A sword imbued with fire", 100, 50, 10, swordIcon);
             PlayerCharacter.AddItem(fireSword);
         }
         else
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("❌ 장착된 아이템 중 null이 있습니다!");
+                Debug.LogError("장착된 아이템 중 null이 있습니다!");
             }
         }
 

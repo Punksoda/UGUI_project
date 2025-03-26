@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour
 {
-    [SerializeField] private GameObject slotPrefab;
+    [SerializeField] private GameObject slotPrefab; 
     [SerializeField] private GameObject slotPrefab_2;
     [SerializeField] private Transform slotParent;
 
@@ -25,15 +25,15 @@ public class UIInventory : MonoBehaviour
 
     public void InitInventoryUI()
     {
-        foreach (var slot in slotList)
+        for (int i = slotList.Count - 1; i >= 0; i--)
         {
-            Destroy(slot.gameObject);
+            Destroy(slotList[i].gameObject);
         }
         slotList.Clear();
 
-        foreach (var item in player.Inventory)
+        for (int i = 0; i < player.Inventory.Count; i++)
         {
-            AddItemToUI(item);
+            AddItemToUI(player.Inventory[i]);
         }
     }
 
@@ -41,8 +41,8 @@ public class UIInventory : MonoBehaviour
     {
         // 가상의 아이템 생성
         Item newItem = new Item("Stout Shield", "Strong shield can prevent fire", 0, 100, 0, shieldIcon); 
-        player.Inventory.Add(newItem);  // 플레이어 인벤토리에 추가
-        AddItemToUI(newItem);  // UI에 반영
+        player.Inventory.Add(newItem);  
+        AddItemToUI(newItem);  
         GameManager.Instance.SetData();
     }
 
